@@ -1,0 +1,17 @@
+version: '3'
+services:
+  php:
+    container_name: php5.6
+    build: ./
+    ports:
+    - 9090:80
+    volumes:
+      - ./www:/var/www/html
+    networks:
+      - my-network
+
+networks:
+  my-network:
+
+volumes:
+  data:
